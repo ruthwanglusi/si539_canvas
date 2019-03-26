@@ -58,6 +58,7 @@ window.addEventListener('keydown', function(e) {
   if (e.keyCode === 32)
   {
     c.clearRect(0,0,canvas.width,canvas.height)
+    r = 5;
   }
 })
 
@@ -74,36 +75,3 @@ function draw()
   c.fillStyle = color;
   c.fill();
 }
-
-
-// function animate(){
-//   requestAnimationFrame(animate);
-//   console.log('hlw');
-// }
-
-
-
-
-// //rectangle
-// c.fillStyle = 'rgba(255,0,0,0.3)';
-// c.fillRect(0,0,100,100);
-//
-//
-// //line
-// c.beginPath();
-// c.moveTo(400,300);
-// c.lineTo(300,100);
-// c.lineTo(400,500);
-// c.strokeStyle = '#fa34a3';
-// c.stroke();
-//
-// //arc
-// for(var i=0; i<100; i++)
-// {
-//   var x = Math.random()*innerWidth*0.8;
-//   var y = Math.random()*innerHeight*0.8;
-//   c.beginPath();
-//   c.arc(x, y, 10, 0, Math.PI*2, false);
-//   c.strokeStyle = 'blue';
-//   c.stroke();
-// }
