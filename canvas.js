@@ -41,17 +41,22 @@ window.addEventListener('keydown', function(e) {
     color = 'rgba(230,175,75,0.4)';
   }
 
+  // r for red
+  if (e.keyCode === 82)
+  {
+    color = 'rgba(230,39,57,0.4)';
+  }
+
   // up arrow for increasing the size
   if (e.keyCode === 38)
   {
     r += 1;
   }
 
-  // down arrow for decreasing the size
+  // down arrow for decreasing the size (no smaller than 1)
   if (e.keyCode === 40 && r>1)
   {
       r -= 1;
-      console.log(r);
   }
 
   // space bar for clearing the canvas
@@ -62,9 +67,11 @@ window.addEventListener('keydown', function(e) {
   }
 })
 
-document.querySelector('#cpicker').addEventListener('input', function(e)
+// customize the color
+cpicker.addEventListener('input', function()
 {
-  console.log(this.value);
+  color = '' + this.value;
+  console.log(color);
 })
 
 
@@ -75,3 +82,7 @@ function draw()
   c.fillStyle = color;
   c.fill();
 }
+
+// reference:
+// HTML5 Canvas Tutorials for Beginners | Become a Canvas Pro
+// https://www.youtube.com/watch?v=EO6OkltgudE&list=PLpPnRKq7eNW3We9VdCfx9fprhqXHwTPXL
