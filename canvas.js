@@ -14,6 +14,17 @@ var pointer =
   y: undefined
 }
 
+//////////mobile mode//////////
+window.addEventListener('ontouchmove', function(e)
+{
+  pointer.x = e.x;
+  pointer.y = e.y;
+  draw();
+})
+
+//////////desktop mode//////////
+
+
 window.addEventListener('mousemove', function(e)
 {
   pointer.x = e.x;
