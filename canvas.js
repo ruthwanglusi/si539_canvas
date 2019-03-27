@@ -15,7 +15,7 @@ var pointer =
 }
 
 //////////mobile mode//////////
-window.addEventListener('ontouchmove', function(e)
+window.addEventListener('touchmove', function(e)
 {
   pointer.x = e.x;
   pointer.y = e.y;
