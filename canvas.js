@@ -17,8 +17,8 @@ var pointer =
 //////////mobile mode//////////
 window.addEventListener('touchmove', function(e)
 {
-  pointer.x = e.offsetX;
-  pointer.y = e.offsetY;
+  pointer.x = e.pageX;
+  pointer.y = e.pageY;
   draw();
 })
 
@@ -27,8 +27,8 @@ window.addEventListener('touchmove', function(e)
 
 window.addEventListener('mousemove', function(e)
 {
-  pointer.x = e.offsetX;
-  pointer.y = e.offsetY;
+  pointer.x = e.pageX;
+  pointer.y = e.pageY;
   // console.log(pointer);
   draw();
 })
