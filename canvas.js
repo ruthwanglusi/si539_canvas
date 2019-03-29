@@ -17,15 +17,14 @@ var pointer =
 //////////mobile mode//////////
 window.addEventListener('touchmove', function(e)
 {
-  location.reload();
   pointer.x = e.pageX;
   pointer.y = e.pageY;
   draw();
-}; false)
+})
 
 window.addEventListener('orientationchange', function(e)
 {
-  clear();
+  location.reload();
 })
 
 //////////desktop mode//////////
@@ -73,7 +72,7 @@ window.addEventListener('keydown', function(e) {
   // down arrow for decreasing the size (no smaller than 1)
   if (e.keyCode === 40 && r>1)
   {
-    r -= 1;
+      r -= 1;
   }
 
   // space bar for clearing the canvas
