@@ -22,6 +22,13 @@ window.addEventListener('touchmove', function(e)
   draw();
 })
 
+window.addEventListener('orientationchange', function(e)
+{
+  c.clearRect(0,0,canvas.width,canvas.height)
+})
+
+
+
 //////////desktop mode//////////
 
 
