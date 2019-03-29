@@ -24,10 +24,8 @@ window.addEventListener('touchmove', function(e)
 
 window.addEventListener('orientationchange', function(e)
 {
-  c.clearRect(0,0,canvas.width,canvas.height)
+  clear();
 })
-
-
 
 //////////desktop mode//////////
 
@@ -74,13 +72,13 @@ window.addEventListener('keydown', function(e) {
   // down arrow for decreasing the size (no smaller than 1)
   if (e.keyCode === 40 && r>1)
   {
-      r -= 1;
+    r -= 1;
   }
 
   // space bar for clearing the canvas
   if (e.keyCode === 32)
   {
-    c.clearRect(0,0,canvas.width,canvas.height)
+    clear();
     r = 5;
   }
 })
@@ -99,6 +97,11 @@ function draw()
   c.arc(pointer.x, pointer.y, r, 0, Math.PI*2, false);
   c.fillStyle = color;
   c.fill();
+}
+
+function clear()
+{
+  c.clearRect(0,0,canvas.width,canvas.height)
 }
 
 // reference:
