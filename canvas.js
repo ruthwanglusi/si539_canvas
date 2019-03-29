@@ -20,7 +20,7 @@ window.addEventListener('touchmove', function(e)
   pointer.x = e.pageX;
   pointer.y = e.pageY;
   draw();
-})
+},false)
 
 window.addEventListener('orientationchange', function(e)
 {
