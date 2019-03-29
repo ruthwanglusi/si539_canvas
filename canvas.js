@@ -17,10 +17,11 @@ var pointer =
 //////////mobile mode//////////
 window.addEventListener('touchmove', function(e)
 {
+  location.reload();
   pointer.x = e.pageX;
   pointer.y = e.pageY;
   draw();
-})
+}; false)
 
 window.addEventListener('orientationchange', function(e)
 {
